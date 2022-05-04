@@ -1,11 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import GlobalStyle from './GlobalStyle';
 import LogoUrl from './background.png';
 
+import SongList from './components/SongList';
+import SongPage from './pages/SongPage';
+
 const Container = styled.div`
+  position: fixed;
+  z-index: -5;
   background: url(${LogoUrl});
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -61,11 +70,12 @@ const CloseButton = styled.button`
 `;
 
 const DarkBg = styled.div`
-  background-color: darkred;
-  opacity: 50%;
-  width: 100vw;
-  height: 100vh;
-
+  z-index: -1;
+  position: fixed;
+  background-color: #862633;
+  opacity: 70%;
+  width: 100%;
+  height: 100%;
   animation-duration: 0.5s;
   animation-timing-function: ease-in-out;
   animation-name: ${fadeIn};
@@ -90,21 +100,28 @@ const App = () => {
   return (
     <>
       <GlobalStyle />
-      <Container>
-        {isClicked ? (
-          <DarkBg>
-            <CloseButton />
-          </DarkBg>
-        ) : (
-          <MainButton
-            onClick={() => {
-              setIsClicked(true);
-            }}
-          >
-            입장하기
-          </MainButton>
-        )}
-      </Container>
+      <Container />
+      {isClicked ? (
+        <>
+          <BrowserRouter>
+            <DarkBg>
+              <CloseButton />
+            </DarkBg>
+            <Routes>
+              <Route path="/" element={<SongList />} />
+              <Route path="/player" element={<SongPage />} />
+            </Routes>
+          </BrowserRouter>
+        </>
+      ) : (
+        <MainButton
+          onClick={() => {
+            setIsClicked(true);
+          }}
+        >
+          입장하기
+        </MainButton>
+      )}
     </>
   );
 };
