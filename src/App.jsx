@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 import GlobalStyle from './GlobalStyle';
 import LogoUrl from './background.png';
@@ -37,10 +37,8 @@ const MainButton = styled.button`
   margin: 0;
   position: absolute;
   top: 70%;
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   left: 50%;
-  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 `;
 
@@ -74,8 +72,21 @@ const DarkBg = styled.div`
   animation-fill-mode: forwards;
 `;
 
+const visible = true;
+
 const App = () => {
   const [isClicked, setIsClicked] = useState(false);
+  const [animate, setAnimate] = useState(false);
+  const [localVisible, setLocalVisible] = useState(visible);
+  useEffect(() => {
+    if (localVisible && !visible) {
+      setAnimate(true);
+      setTimeout(() => setAnimate(false), 250);
+    }
+    setLocalVisible(visible);
+  }, [localVisible, visible]);
+  
+  if (!animate && !localVisible) return null;
   return (
     <>
       <GlobalStyle />
