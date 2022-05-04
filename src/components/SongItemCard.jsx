@@ -11,6 +11,7 @@ const CardLayout = styled.div`
 
 const Divider = styled.div`
   margin: 3px auto;
+  margin-bottom: 10px;
   width: 100%;
   height: 2px;
   background-color: #862633;
@@ -26,21 +27,22 @@ const SongDescription = styled.div`
 `;
 
 const SongDescEmphasis = styled.div`
-  margin-top: 20px;
+  margin-top: 15px;
   font-size: 25px;
   color: #862633;
 `;
 
 const SongItemCard = (props) => {
+  const { title, descStrings, emp } = props;
+  const descElements = descStrings.map((item) => {
+    return <SongDescription>{item}</SongDescription>;
+  });
   return (
     <CardLayout>
-      <SongTitle>뱃노래</SongTitle>
+      <SongTitle>{title}</SongTitle>
       <Divider />
-      <SongDescription>
-        함께하겠습니다. <br />
-        민족의 노래! 승리의 노래!
-      </SongDescription>
-      <SongDescEmphasis>뱃 노 래 !</SongDescEmphasis>
+      {descElements}
+      <SongDescEmphasis>{emp}</SongDescEmphasis>
     </CardLayout>
   );
 };
