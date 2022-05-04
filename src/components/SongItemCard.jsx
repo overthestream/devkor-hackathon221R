@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const CardLayout = styled.div`
   width: 300px;
@@ -7,6 +8,14 @@ const CardLayout = styled.div`
   padding: 15px;
   border-radius: 15px;
   background-color: #d7ccbd;
+
+  &:hover {
+    background-color: #dcd1c2;
+    cursor: pointer;
+  }
+  &:active {
+    background-color: #d1c7b8;
+  }
 `;
 
 const Divider = styled.div`
@@ -19,11 +28,13 @@ const Divider = styled.div`
 
 const SongTitle = styled.div`
   font-size: 30px;
+  color: black;
 `;
 
 const SongDescription = styled.div`
   margin-top: 10px;
   font-size: 20px;
+  color: black;
 `;
 
 const SongDescEmphasis = styled.div`
@@ -33,16 +44,18 @@ const SongDescEmphasis = styled.div`
 `;
 
 const SongItemCard = (props) => {
-  const { title, descStrings, emp } = props;
+  const { title, descStrings, emp, url, typoArr } = props;
   const descElements = descStrings.map((item) => {
     return <SongDescription>{item}</SongDescription>;
   });
   return (
     <CardLayout>
-      <SongTitle>{title}</SongTitle>
-      <Divider />
-      {descElements}
-      <SongDescEmphasis>{emp}</SongDescEmphasis>
+      <Link to="player" state={{ url, typoArr }}>
+        <SongTitle>{title}</SongTitle>
+        <Divider />
+        {descElements}
+        <SongDescEmphasis>{emp}</SongDescEmphasis>
+      </Link>
     </CardLayout>
   );
 };
