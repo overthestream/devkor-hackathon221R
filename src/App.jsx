@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import GlobalStyle from './GlobalStyle';
 import LogoUrl from './background.png';
+import CheerUrl from './leader.png';
 
 import SongList from './components/SongList';
 import SongPage from './pages/SongPage';
@@ -18,6 +19,15 @@ const Container = styled.div`
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+`;
+
+const ButtonText = styled.div`
+  margin: 0 auto;
+  margin-top: 100%;
+  width: 80%;
+  height: 20%;
+  border-radius: 10px;
+  background-color: white;
 `;
 
 const fadeIn = keyframes`
@@ -38,23 +48,44 @@ const fadeOut = keyframes`
   }
 `;
 
-const MainButton = styled.button`
-  width: 200px;
-  height: 60px;
-  border-radius: 15px;
-  font-size: 20px;
-  margin: 0;
-  position: absolute;
-  top: 70%;
-  transform: translateY(-50%);
+const CheerLogo = styled.img`
+  width: 100%;
+  height: 100%;
+`;
+
+const BackG = styled.div`
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  z-index: -1;
+  background-color: #862633;
+  top: 20px;
+  border-radius: 20px;
+`;
+
+const MainButton = styled.div`
+  width: 20%;
+
+  font-size: 30px;
+
+  text-align: center;
+
+  position: fixed;
+  top: 10%;
   left: 50%;
+
+  transform: translateY(-50%);
   transform: translateX(-50%);
+
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const CloseButton = styled.button`
-  width: 200px;
-  height: 60px;
-  border-radius: 15px;
+  width: fit-content;
+  height: fit-content;
   font-size: 20px;
   margin: 0;
   position: absolute;
@@ -106,7 +137,14 @@ const App = () => {
             setIsClicked(true);
           }}
         >
-          입장하기
+          <CheerLogo src={CheerUrl} />
+          <br />
+          KU
+          <br />
+          응원 아카이브
+          <BackG>
+            <ButtonText />
+          </BackG>
         </MainButton>
       )}
     </>

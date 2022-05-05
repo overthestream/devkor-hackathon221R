@@ -5,10 +5,16 @@ import FadeIn from 'react-fade-in';
 import json from '../songs.json';
 import SongItemCard from './SongItemCard';
 
-const Wrapper = styled.div`
-  width: fit-content;
+const Wrapper = styled(FadeIn)`
+  width: 650px;
+  height: 100%;
   margin: 0 auto;
-  padding: 20px;
+  display: flex;
+  padding-top: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: space-around;
 `;
 
 const SongList = () => {
@@ -30,11 +36,7 @@ const SongList = () => {
     );
   });
 
-  return (
-    <Wrapper>
-      <FadeIn>{cardList}</FadeIn>
-    </Wrapper>
-  );
+  return <Wrapper>{cardList}</Wrapper>;
 };
 
 export default SongList;

@@ -1,7 +1,10 @@
 [
   {
     "title": "뱃노래",
-    "descStrings": ["함께하겠습니다.", "민족의 노래! 승리의 노래!"],
+    "descStrings": [
+      "함께하겠습니다.",
+      "민족의 노래! 승리의 노래!"
+    ],
     "emp": "뱃 노 래 !",
     "url": "https://www.youtube.com/watch?v=7DtBSLP9cP4",
     "typoArr": [
@@ -96,23 +99,99 @@
     ]
   },
   {
-    "title": "뱃노래",
-    "descStrings": ["함께하겠습니다.", "민족의 노래! 승리의 노래!"],
-    "emp": "뱃 노 래 !"
+    "title": "엘리제를 위하여",
+    "descStrings": [
+      "지금 이 자리에 승리의 여신을 불러보겠습니다.",
+      "승리의 여신이여, 깨어나라!",
+      "엘리제를!"
+    ],
+    "emp": "위하여!",
+    "url": "https://www.youtube.com/watch?time_continue=95&v=OkmGzaOkOz4&feature=emb_logo"
   },
   {
-    "title": "뱃노래",
-    "descStrings": ["함께하겠습니다.", "민족의 노래! 승리의 노래!"],
-    "emp": "뱃 노 래 !"
+    "title": "석탑",
+    "descStrings": [
+      "하늘을 향해 불쑥 솟아오르는~"
+    ],
+    "emp": "석탑!",
+    "url": "https://www.youtube.com/watch?v=hDUhqVVElh0"
   },
   {
-    "title": "뱃노래",
-    "descStrings": ["함께하겠습니다.", "민족의 노래! 승리의 노래!"],
-    "emp": "뱃 노 래 !"
+    "title": "민족의 아리아",
+    "descStrings": [
+      "고대가 제일 사랑하는 노래!",
+      "민족의!"
+    ],
+    "emp": "아리아!"
   },
   {
-    "title": "뱃노래",
-    "descStrings": ["함께하겠습니다.", "민족의 노래! 승리의 노래!"],
-    "emp": "뱃 노 래 !"
+    "title": "FOREVER",
+    "descStrings": [
+      "우리의 함성은 신화가 되리라!"
+    ],
+    "emp": "FOREVER !"
+  },
+  {
+    "title": "FOREVER",
+    "descStrings": [
+      "우리의 함성은 신화가 되리라!"
+    ],
+    "emp": "FOREVER !"
+  },
+  {
+    "title": "FOREVER",
+    "descStrings": [
+      "우리의 함성은 신화가 되리라!"
+    ],
+    "emp": "FOREVER !"
+  },
+  {
+    "title": "FOREVER",
+    "descStrings": [
+      "우리의 함성은 신화가 되리라!"
+    ],
+    "emp": "FOREVER !"
+  },
+  {
+    "title": "FOREVER",
+    "descStrings": [
+      "우리의 함성은 신화가 되리라!"
+    ],
+    "emp": "FOREVER !"
+  },
+  {
+    "title": "FOREVER",
+    "descStrings": [
+      "우리의 함성은 신화가 되리라!"
+    ],
+    "emp": "FOREVER !"
+  },
+  {
+    "title": "FOREVER",
+    "descStrings": [
+      "우리의 함성은 신화가 되리라!"
+    ],
+    "emp": "FOREVER !"
+  },
+  {
+    "title": "FOREVER",
+    "descStrings": [
+      "우리의 함성은 신화가 되리라!"
+    ],
+    "emp": "FOREVER !"
+  },
+  {
+    "title": "FOREVER",
+    "descStrings": [
+      "우리의 함성은 신화가 되리라!"
+    ],
+    "emp": "FOREVER !"
+  },
+  {
+    "title": "FOREVER",
+    "descStrings": [
+      "우리의 함성은 신화가 되리라!"
+    ],
+    "emp": "FOREVER !"
   }
 ]
