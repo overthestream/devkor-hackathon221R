@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -31,7 +31,7 @@ const fadeIn = keyframes`
 
 const fadeOut = keyframes`
   from {
-    opacity: 0.7
+    opacity: 0.5
   }
   to {
     opacity: 0
@@ -64,7 +64,7 @@ const CloseButton = styled.button`
   transform: translateX(-50%);
 
   animation-duration: 0.3s;
-  /* animation-timing-function: ease-out; */
+  animation-timing-function: ease-in;
   animation-name: ${fadeOut};
   animation-fill-mode: forwards;
 `;
@@ -82,21 +82,8 @@ const DarkBg = styled.div`
   animation-fill-mode: forwards;
 `;
 
-const visible = true;
-
 const App = () => {
   const [isClicked, setIsClicked] = useState(false);
-  const [animate, setAnimate] = useState(false);
-  const [localVisible, setLocalVisible] = useState(visible);
-  useEffect(() => {
-    if (localVisible && !visible) {
-      setAnimate(true);
-      setTimeout(() => setAnimate(false), 250);
-    }
-    setLocalVisible(visible);
-  }, [localVisible, visible]);
-  
-  if (!animate && !localVisible) return null;
   return (
     <>
       <GlobalStyle />
