@@ -95,7 +95,7 @@ const App = () => {
     }
     setLocalVisible(visible);
   }, [localVisible, visible]);
-  
+
   if (!animate && !localVisible) return null;
   return (
     <>

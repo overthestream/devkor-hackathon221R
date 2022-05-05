@@ -5,9 +5,10 @@ import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
 
 const Wrapper = styled.div`
-  width: 100%;
-  height: 700px;
-  background-color: red;
+  width: 95%;
+  padding-top: 2.5vh;
+  margin-left: 2.5%;
+  height: 95vh;
 `;
 
 const Typography = styled.div`
@@ -22,7 +23,11 @@ const Typography = styled.div`
   color: white;
 `;
 
-const YoutubePlayer = styled(ReactPlayer)``;
+const YoutubePlayer = styled(ReactPlayer)`
+  .player {
+    margin: 0 auto;
+  }
+`;
 
 const SongPage = () => {
   const location = useLocation();
@@ -38,6 +43,7 @@ const SongPage = () => {
   return (
     <Wrapper>
       <YoutubePlayer
+        className="player"
         ref={player}
         url={url}
         width="100%"
