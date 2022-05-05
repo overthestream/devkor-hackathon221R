@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import FadeIn from 'react-fade-in';
 import { Link } from 'react-router-dom';
 
 const CardLayout = styled.div`
@@ -8,6 +9,7 @@ const CardLayout = styled.div`
   padding: 15px;
   border-radius: 15px;
   background-color: #d7ccbd;
+  margin: 0px 20px 20px 10px;
 
   &:hover {
     background-color: #dcd1c2;
